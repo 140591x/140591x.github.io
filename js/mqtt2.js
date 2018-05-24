@@ -55,7 +55,15 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
     console.log("onMessageArrived:" + message.payloadString);
-    change_color(message.payloadString);
+    	if(message.payloadString == '7'){
+		change_color('6');
+	}
+	else if(message.payloadString == '6'){
+		change_color('7');
+	}
+	else{
+		change_color( message.payloadString);
+	}
 }
 
 
